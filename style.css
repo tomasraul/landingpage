@@ -18,7 +18,8 @@
         display: grid;
         grid-template: auto auto / auto;
     }
-    header{
+    header div{
         flex-flow: row wrap-reverse;
     }
+
 }
