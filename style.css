@@ -1,25 +1,158 @@
-.fase1 {
-    display: grid;
-    grid-template: auto auto / auto auto;
+/* Header */
+.header-hero {
+    background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+    color: white;
+    padding: 60px 20px;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
-.fase2 {
+.header-content {
     display: grid;
-    grid-template: auto auto / auto auto;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-@media (max-width: 800px) {
-    .fase1 {
-        display: grid;
-        grid-template: auto auto / auto;
+.header-text h1 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.header-text .lead {
+    font-size: 1.3rem;
+    opacity: 0.95;
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Seções */
+.section-intro {
+    margin-top: 40px;
+}
+
+.section-intro h2,
+.section-intro h3 {
+    color: #0066cc;
+}
+
+.section-intro ul {
+    padding-left: 0;
+}
+
+.section-intro li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.05rem;
+}
+
+.section-intro li:last-child {
+    border-bottom: none;
+}
+
+/* Seção Instrutor */
+.section-instructor {
+    border-radius: 1rem;
+    margin: 40px 0;
+}
+
+.instructor-image img {
+    border: 5px solid #0066cc;
+    transition: transform 0.3s ease;
+}
+
+.instructor-image img:hover {
+    transform: scale(1.05);
+}
+
+/* CTA */
+.section-cta {
+    margin-top: 60px;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 102, 204, 0.2);
+}
+
+.price-badge {
+    padding: 30px;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    border-radius: 1rem;
+}
+
+.new-price {
+    color: #0066cc;
+}
+
+.discount-badge {
+    display: inline-block;
+}
+
+/* Footer */
+.footer-main {
+    background-color: #1a1a1a;
+    margin-top: 80px;
+    border-top: 4px solid #0066cc;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-hero {
+        padding: 40px 20px;
+        clip-path: none;
     }
 
-    .fase2 {
-        display: grid;
-        grid-template: auto auto / auto;
-    }
-    header div{
-        flex-flow: row wrap-reverse;
+    .header-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
 
+    .header-text h1 {
+        font-size: 2rem;
+    }
+
+    .header-text .lead {
+        font-size: 1.1rem;
+    }
+
+    .section-intro {
+        margin-top: 30px;
+    }
+
+    .instructor-image {
+        margin-bottom: 30px;
+    }
+
+    .section-intro li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-text .lead {
+        font-size: 1rem;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
 }
