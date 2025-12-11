@@ -1,0 +1,24 @@
+.fase1 {
+    display: grid;
+    grid-template: auto auto / auto auto;
+}
+
+.fase2 {
+    display: grid;
+    grid-template: auto auto / auto auto;
+}
+
+@media (max-width: 800px) {
+    .fase1 {
+        display: grid;
+        grid-template: auto auto / auto;
+    }
+
+    .fase2 {
+        display: grid;
+        grid-template: auto auto / auto;
+    }
+    header{
+        flex-flow: row wrap-reverse;
+    }
+}
